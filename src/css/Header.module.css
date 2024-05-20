@@ -1,0 +1,73 @@
+.hd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.hd h1 img {
+  width: 125px;
+}
+.hd nav,
+.hd nav > div {
+  display: flex;
+}
+.hd .person::before {
+  content: '';
+  width: 1px;
+  height: 35%;
+  margin: 0 1.5rem;
+  background-color: #ccc;
+  position: relative;
+  top: 30%;
+}
+.hd a {
+  padding: 1rem;
+  transition: 0.5s;
+}
+.hd a:hover {
+  color: #b29a6c;
+}
+.ham {
+  display: none;
+}
+@media (max-width: 800px) {
+  .hd {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 90px;
+    background-color: #fff;
+  }
+  .ham {
+    display: block;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  .hd nav {
+    display: none;
+    border: 1px solid pink;
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 99;
+    color: #fff;
+    padding-top: 100px;
+  }
+  .hd nav.on {
+    display: block;
+  }
+  .hd .gnb {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hd .person {
+    justify-content: center;
+  }
+  .hd .person::before {
+    display: none;
+  }
+}
